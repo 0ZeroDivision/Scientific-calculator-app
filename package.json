@@ -1,0 +1,37 @@
+{
+  "name": "ti84-calculator",
+  "version": "1.0.0",
+  "description": "TI-84 Graphing Calculator desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.ti84calc.app",
+    "productName": "TI-84 Calculator",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "category": "public.app-category.education",
+      "target": ["dmg", "zip"]
+    },
+    "win": {
+      "target": ["nsis", "portable"]
+    },
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "category": "Education"
+    }
+  },
+  "devDependencies": {
+    "electron": "^36.3.1",
+    "electron-builder": "^26.0.12"
+  },
+  "keywords": ["ti84", "calculator", "graphing"],
+  "author": "",
+  "license": "MIT"
+}
